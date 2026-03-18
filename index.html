@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PDFShine – Free PDF Tools Online | Merge, Split, Compress PDF</title>
+<meta name="description" content="28+ free online PDF tools. Merge PDF, Split PDF, Compress PDF, Protect PDF, Unlock PDF, PDF to Word, Image to PDF and more. No signup, no watermark, 100% free."/>
+<link rel="canonical" href="https://pdfshine.in/"/>
+<meta property="og:title" content="PDFShine – Free PDF Tools Online"/>
+<meta property="og:description" content="28+ free PDF tools. No signup. No watermark. Runs in your browser."/>
+<meta property="og:url" content="https://pdfshine.in/"/>
+<meta property="og:type" content="website"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"PDFShine","url":"https://pdfshine.in/","description":"28+ free PDF and document tools online"}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --white:#ffffff; --bg:#f5f6fa; --bg2:#eef0f7; --surface:#ffffff;
+  --border:#e2e5f0; --border2:#d0d4e8;
+  --ink:#1a1d2e; --ink2:#5a5f7d; --ink3:#9399b5; --ink4:#c5c9de;
+  --red:#e8403a; --red2:#ff6b65; --red-bg:#fff5f5; --red-border:#fdd;
+  --cat-pdf:#e8403a; --cat-convert:#2563eb; --cat-security:#16a34a;
+  --cat-edit:#d97706; --cat-image:#7c3aed; --cat-text:#0891b2; --cat-util:#db2777;
+  --font:'Figtree',sans-serif;
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
+  --shadow:0 4px 16px rgba(0,0,0,0.08),0 1px 4px rgba(0,0,0,0.04);
+  --shadow-lg:0 12px 40px rgba(0,0,0,0.12),0 4px 12px rgba(0,0,0,0.06);
+  --r:12px; --r2:18px; --r3:24px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;}
+
+header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;height:62px;display:flex;align-items:center;padding:0 40px;gap:24px;box-shadow:var(--shadow-sm);}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.logo-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--red),#ff8c00);display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 4px 12px rgba(232,64,58,0.3);}
+.logo-name{font-size:1.2rem;font-weight:900;color:var(--ink);letter-spacing:-0.04em;}
+.logo-name span{color:var(--red);}
+.header-search{flex:1;max-width:360px;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;display:flex;align-items:center;gap:9px;padding:0 14px;height:38px;transition:border-color 0.15s;}
+.header-search:focus-within{border-color:var(--red);background:var(--white);}
+.header-search input{background:none;border:none;outline:none;color:var(--ink);font-family:var(--font);font-size:0.85rem;width:100%;}
+.header-search input::placeholder{color:var(--ink3);}
+nav{display:flex;align-items:center;gap:2px;margin-left:auto;}
+nav a{font-size:0.83rem;font-weight:600;color:var(--ink2);text-decoration:none;padding:6px 14px;border-radius:8px;transition:all 0.15s;}
+nav a:hover{color:var(--ink);background:var(--bg);}
+.nav-cta{background:var(--red)!important;color:white!important;font-weight:700!important;box-shadow:0 2px 8px rgba(232,64,58,0.3);}
+.nav-cta:hover{background:#d63530!important;transform:translateY(-1px);}
+
+.hero{background:linear-gradient(160deg,#fff 0%,#fff5f5 40%,#f0f4ff 100%);padding:72px 40px 60px;text-align:center;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+.hero-chip{display:inline-flex;align-items:center;gap:6px;background:var(--red-bg);border:1px solid var(--red-border);color:var(--red);font-size:0.72rem;font-weight:700;padding:5px 14px;border-radius:100px;margin-bottom:22px;text-transform:uppercase;letter-spacing:0.07em;animation:fadeUp 0.5s ease both;}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:900;letter-spacing:-0.05em;line-height:1.05;margin-bottom:16px;color:var(--ink);animation:fadeUp 0.5s 0.07s ease both;}
+.hero h1 .hl{background:linear-gradient(135deg,var(--red),#ff6b00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-sub{font-size:1rem;color:var(--ink2);max-width:520px;margin:0 auto 32px;line-height:1.75;animation:fadeUp 0.5s 0.14s ease both;}
+.hero-badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:36px;animation:fadeUp 0.5s 0.2s ease both;}
+.hbadge{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1.5px solid var(--border);border-radius:100px;padding:6px 14px;font-size:0.78rem;font-weight:600;color:var(--ink2);box-shadow:var(--shadow-sm);}
+.dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.hero-search-big{max-width:540px;margin:0 auto;background:var(--white);border:2px solid var(--border);border-radius:14px;display:flex;align-items:center;gap:10px;padding:0 18px;height:52px;box-shadow:var(--shadow);transition:border-color 0.2s,box-shadow 0.2s;animation:fadeUp 0.5s 0.26s ease both;}
+.hero-search-big:focus-within{border-color:var(--red);box-shadow:0 0 0 4px rgba(232,64,58,0.1),var(--shadow);}
+.hero-search-big input{background:none;border:none;outline:none;color:var(--ink);font-family:var(--font);font-size:0.95rem;width:100%;}
+.hero-search-big input::placeholder{color:var(--ink3);}
+
+.stats-row{display:flex;justify-content:center;background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow-x:auto;}
+.stat-item{padding:18px 36px;text-align:center;border-right:1px solid var(--border);flex-shrink:0;}
+.stat-item:last-child{border-right:none;}
+.stat-val{font-size:1.4rem;font-weight:900;color:var(--red);display:block;letter-spacing:-0.04em;}
+.stat-lbl{font-size:0.7rem;color:var(--ink3);text-transform:uppercase;letter-spacing:0.07em;font-weight:600;}
+
+.ad-wrap{max-width:1100px;margin:28px auto 0;padding:0 32px;}
+.ad-box{background:var(--white);border:1px dashed var(--border2);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:var(--ink4);font-size:0.72rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;gap:6px;text-align:center;flex-direction:column;}
+.ad-728{min-height:90px;}
+.ad-300{min-height:250px;width:300px;flex-shrink:0;}
+.ad-160{min-height:600px;width:160px;flex-shrink:0;}
+
+.site-wrap{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:28px;padding:28px 32px 80px;align-items:start;}
+.content-col{}
+.sidebar-col{display:flex;flex-direction:column;gap:20px;position:sticky;top:74px;}
+
+#search-results{display:none;margin-bottom:24px;}
+#search-results.show{display:block;}
+
+.section{margin-bottom:36px;}
+.section-head{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.section-dot{width:10px;height:10px;border-radius:50%;background:var(--tc,var(--red));flex-shrink:0;}
+.section-title{font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink3);}
+.section-line{flex:1;height:1px;background:var(--border);}
+.section-count{font-size:0.65rem;color:var(--ink3);font-weight:700;background:var(--bg);border:1px solid var(--border);border-radius:100px;padding:2px 9px;}
+
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;}
+
+.tool-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r2);padding:20px 18px 18px;text-decoration:none;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;cursor:pointer;transition:all 0.2s cubic-bezier(0.34,1.4,0.64,1);min-height:148px;box-shadow:var(--shadow-sm);}
+.tool-card:hover{border-color:var(--tc,var(--red));box-shadow:0 8px 28px rgba(0,0,0,0.1),0 0 0 1px var(--tc,var(--red));transform:translateY(-3px);}
+.tool-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--tc,var(--red));border-radius:var(--r2) var(--r2) 0 0;transform:scaleX(0);transition:transform 0.2s;transform-origin:left;}
+.tool-card:hover::before{transform:scaleX(1);}
+.card-top{display:flex;align-items:flex-start;justify-content:space-between;}
+.card-icon{width:46px;height:46px;border-radius:12px;font-size:22px;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--tc,var(--red)) 10%,var(--bg));transition:transform 0.2s;}
+.tool-card:hover .card-icon{transform:scale(1.1) rotate(-5deg);}
+.badge{font-size:0.58rem;font-weight:800;padding:3px 7px;border-radius:5px;text-transform:uppercase;letter-spacing:0.04em;}
+.badge-hot{background:#fee2e2;color:#dc2626;}
+.badge-new{background:#dcfce7;color:#16a34a;}
+.card-name{font-size:0.88rem;font-weight:800;color:var(--ink);line-height:1.2;letter-spacing:-0.01em;}
+.card-desc{font-size:0.71rem;color:var(--ink3);line-height:1.45;font-weight:500;}
+.card-arrow{position:absolute;bottom:14px;right:14px;color:var(--ink4);font-size:0.85rem;opacity:0;transition:all 0.2s;}
+.tool-card:hover .card-arrow{opacity:1;transform:translateX(3px);color:var(--tc,var(--red));}
+
+.ad-in-content{margin:24px 0;}
+
+.sidebar-widget{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r2);overflow:hidden;box-shadow:var(--shadow-sm);}
+.sw-head{padding:14px 18px;border-bottom:1px solid var(--border);background:var(--bg);}
+.sw-head h3{font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink3);}
+.sw-body{padding:12px;}
+.related-link{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:9px;text-decoration:none;background:var(--bg);border:1px solid var(--border);margin-bottom:6px;transition:all 0.15s;}
+.related-link:last-child{margin-bottom:0;}
+.related-link:hover{border-color:var(--red);background:var(--red-bg);}
+.rl-icon{font-size:1rem;width:22px;text-align:center;flex-shrink:0;}
+.rl-name{font-size:0.78rem;font-weight:600;color:var(--ink2);}
+.related-link:hover .rl-name{color:var(--red);}
+.why-box{background:linear-gradient(135deg,#fff5f5,#fff0f0);border:1.5px solid #fecaca;border-radius:var(--r2);padding:20px;box-shadow:var(--shadow-sm);}
+.why-box h3{font-size:0.88rem;font-weight:800;color:var(--ink);margin-bottom:14px;}
+.why-item{display:flex;align-items:center;gap:8px;font-size:0.78rem;color:var(--ink2);font-weight:500;margin-bottom:8px;}
+.why-item:last-child{margin-bottom:0;}
+.why-item::before{content:'✓';color:#16a34a;font-weight:900;flex-shrink:0;width:16px;}
+
+.how-section{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:56px 32px;}
+.how-inner{max-width:900px;margin:0 auto;text-align:center;}
+.how-inner h2{font-size:1.7rem;font-weight:900;letter-spacing:-0.04em;margin-bottom:8px;}
+.how-inner .sub{font-size:0.9rem;color:var(--ink2);margin-bottom:40px;}
+.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.how-step{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r2);padding:28px 24px;text-align:center;}
+.step-num{width:40px;height:40px;border-radius:50%;background:var(--red);color:white;font-weight:900;font-size:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;box-shadow:0 4px 12px rgba(232,64,58,0.3);}
+.how-step h3{font-size:0.95rem;font-weight:800;margin-bottom:8px;}
+.how-step p{font-size:0.78rem;color:var(--ink3);line-height:1.6;}
+
+.faq-section{max-width:760px;margin:0 auto;padding:56px 32px;}
+.faq-section h2{font-size:1.5rem;font-weight:900;letter-spacing:-0.04em;margin-bottom:28px;}
+.faq-item{border-bottom:1px solid var(--border);padding:18px 0;cursor:pointer;}
+.faq-q{font-size:0.9rem;font-weight:700;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.faq-q::after{content:'+';color:var(--red);font-size:1.2rem;font-weight:900;flex-shrink:0;transition:transform 0.2s;}
+.faq-item.open .faq-q::after{transform:rotate(45deg);}
+.faq-a{font-size:0.84rem;color:var(--ink2);line-height:1.75;margin-top:10px;display:none;}
+.faq-item.open .faq-a{display:block;}
+
+.seo-section{max-width:900px;margin:0 auto 56px;padding:0 32px;}
+.seo-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r2);padding:32px;margin-bottom:16px;box-shadow:var(--shadow-sm);}
+.seo-card h2{font-size:1.05rem;font-weight:800;color:var(--ink);margin-bottom:12px;letter-spacing:-0.02em;}
+.seo-card p{font-size:0.86rem;color:var(--ink2);line-height:1.8;margin-bottom:10px;}
+.seo-card p:last-child{margin-bottom:0;}
+
+footer{background:var(--ink);color:var(--white);padding:48px 40px 28px;}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:48px;margin-bottom:40px;}
+.footer-brand .fn{font-size:1.1rem;font-weight:900;letter-spacing:-0.04em;color:var(--white);display:block;margin-bottom:10px;}
+.footer-brand .fn span{color:#ff7066;}
+.footer-brand p{font-size:0.78rem;color:#6b7280;line-height:1.7;}
+.footer-col h4{font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.09em;color:#6b7280;margin-bottom:14px;}
+.footer-col a{display:block;font-size:0.78rem;color:#9ca3af;text-decoration:none;margin-bottom:8px;font-weight:500;transition:color 0.15s;}
+.footer-col a:hover{color:var(--white);}
+.footer-bottom{border-top:1px solid #374151;padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-bottom p{font-size:0.73rem;color:#6b7280;}
+.footer-links{display:flex;gap:18px;}
+.footer-links a{font-size:0.73rem;color:#6b7280;text-decoration:none;}
+.footer-links a:hover{color:var(--white);}
+
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:white;font-weight:700;font-size:0.82rem;padding:11px 24px;border-radius:100px;z-index:999;transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1);pointer-events:none;white-space:nowrap;box-shadow:var(--shadow-lg);}
+.toast.show{transform:translateX(-50%) translateY(0);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+.tool-card{animation:fadeUp 0.4s ease both;}
+.tool-grid .tool-card:nth-child(1){animation-delay:.02s}
+.tool-grid .tool-card:nth-child(2){animation-delay:.04s}
+.tool-grid .tool-card:nth-child(3){animation-delay:.06s}
+.tool-grid .tool-card:nth-child(4){animation-delay:.08s}
+.tool-grid .tool-card:nth-child(5){animation-delay:.10s}
+.tool-grid .tool-card:nth-child(6){animation-delay:.12s}
+
+@media(max-width:1100px){.site-wrap{grid-template-columns:1fr;}.sidebar-col{position:static;display:grid;grid-template-columns:1fr 1fr;}.footer-top{grid-template-columns:1fr 1fr;gap:28px;}}
+@media(max-width:768px){header{padding:0 16px;gap:12px;}.header-search{display:none;}nav a:not(.nav-cta){display:none;}.hero{padding:48px 20px 40px;}.site-wrap{padding:20px 16px 60px;}.ad-wrap{padding:0 16px;}.how-steps{grid-template-columns:1fr;}.sidebar-col{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr;gap:24px;}footer{padding:36px 20px 24px;}.faq-section,.seo-section{padding-left:16px;padding-right:16px;}.how-section{padding:40px 20px;}}
+@media(max-width:480px){.tool-grid{grid-template-columns:repeat(2,1fr);}}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="/"><div class="logo-icon">✨</div><div class="logo-name">PDF<span>Shine</span></div></a>
+  <div class="header-search">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9399b5" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" id="search-top" placeholder="Search tools…" oninput="handleSearch(this.value)"/>
+  </div>
+  <nav>
+    <a href="/about">About</a>
+    <a href="/privacy-policy">Privacy</a>
+    <a href="/contact">Contact</a>
+    <a href="#tools" class="nav-cta">All Tools ↓</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-chip">✦ 100% Free · No Signup · Files Stay on Your Device</div>
+  <h1>Every PDF tool you need,<br/><span class="hl">completely free</span></h1>
+  <p class="hero-sub">28+ online tools for PDF, documents and images. Merge, split, compress, protect, convert and more — all running in your browser, instantly.</p>
+  <div class="hero-badges">
+    <span class="hbadge"><span class="dot" style="background:#16a34a"></span>No daily limits</span>
+    <span class="hbadge"><span class="dot" style="background:#2563eb"></span>No watermarks</span>
+    <span class="hbadge"><span class="dot" style="background:#7c3aed"></span>No file uploads</span>
+    <span class="hbadge"><span class="dot" style="background:#d97706"></span>Works offline</span>
+    <span class="hbadge"><span class="dot" style="background:#db2777"></span>Mobile friendly</span>
+  </div>
+  <div class="hero-search-big">
+    <svg style="color:#9399b5;flex-shrink:0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" id="search-hero" placeholder='Search e.g. "compress PDF", "merge", "protect", "ocr"…' oninput="handleSearch(this.value)"/>
+  </div>
+</section>
+
+<div class="stats-row">
+  <div class="stat-item"><span class="stat-val">28+</span><span class="stat-lbl">Free Tools</span></div>
+  <div class="stat-item"><span class="stat-val">0 KB</span><span class="stat-lbl">Uploaded to Server</span></div>
+  <div class="stat-item"><span class="stat-val">100%</span><span class="stat-lbl">Free Forever</span></div>
+  <div class="stat-item"><span class="stat-val">0</span><span class="stat-lbl">Signups Needed</span></div>
+</div>
+
+<div class="ad-wrap">
+  <div class="ad-box ad-728">Advertisement · 728×90 Leaderboard</div>
+</div>
+
+<div class="site-wrap" id="tools">
+  <div class="content-col">
+
+    <div id="search-results">
+      <div class="section-head"><div class="section-dot" style="--tc:var(--red)"></div><span class="section-title">Search Results</span><div class="section-line"></div><span class="section-count" id="search-count">0</span></div>
+      <div class="tool-grid" id="search-grid"></div>
+    </div>
+
+    <!-- PDF TOOLS -->
+    <div class="section">
+      <div class="section-head" style="--tc:var(--cat-pdf)"><div class="section-dot"></div><span class="section-title">📄 PDF Tools</span><div class="section-line"></div><span class="section-count">10 tools</span></div>
+      <div class="tool-grid">
+        <a class="tool-card" href="/tools/merge-pdf" style="--tc:#e8403a" data-kw="merge combine join multiple pdf"><div class="card-top"><div class="card-icon">🔗</div><span class="badge badge-hot">HOT</span></div><div class="card-name">Merge PDF</div><div class="card-desc">Combine multiple PDFs into one document</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/split-pdf" style="--tc:#ea580c" data-kw="split extract separate pages pdf"><div class="card-top"><div class="card-icon">✂️</div><span class="badge badge-hot">HOT</span></div><div class="card-name">Split PDF</div><div class="card-desc">Extract pages or split into separate files</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/compress-pdf" style="--tc:#2563eb" data-kw="compress reduce size pdf smaller"><div class="card-top"><div class="card-icon">🗜️</div><span class="badge badge-hot">HOT</span></div><div class="card-name">Compress PDF</div><div class="card-desc">Reduce file size without losing quality</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/rotate-pdf" style="--tc:#16a34a" data-kw="rotate flip pages pdf landscape portrait"><div class="card-top"><div class="card-icon">🔄</div></div><div class="card-name">Rotate PDF</div><div class="card-desc">Rotate pages 90°, 180° or 270°</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/remove-pages" style="--tc:#dc2626" data-kw="remove delete pages pdf"><div class="card-top"><div class="card-icon">🗑️</div><span class="badge badge-new">NEW</span></div><div class="card-name">Remove Pages</div><div class="card-desc">Delete specific pages from any PDF</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/organize-pdf" style="--tc:#9333ea" data-kw="organize reorder rearrange pages pdf thumbnails drag"><div class="card-top"><div class="card-icon">📑</div><span class="badge badge-new">NEW</span></div><div class="card-name">Organize PDF</div><div class="card-desc">Reorder, rotate and delete pages visually</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/watermark-pdf" style="--tc:#7c3aed" data-kw="watermark stamp text logo pdf"><div class="card-top"><div class="card-icon">🔏</div></div><div class="card-name">Watermark PDF</div><div class="card-desc">Add custom text watermark to every page</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/add-page-numbers" style="--tc:#d97706" data-kw="page numbers footer header pdf"><div class="card-top"><div class="card-icon">🔢</div></div><div class="card-name">Add Page Numbers</div><div class="card-desc">Insert page numbers to your PDF</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/pdf-info" style="--tc:#0891b2" data-kw="pdf info metadata details pages size"><div class="card-top"><div class="card-icon">ℹ️</div></div><div class="card-name">PDF Info Viewer</div><div class="card-desc">View all metadata and file details</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/pdf-to-text" style="--tc:#be185d" data-kw="pdf to text extract copy content"><div class="card-top"><div class="card-icon">📋</div></div><div class="card-name">PDF to Text</div><div class="card-desc">Extract all text content from a PDF</div><span class="card-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="ad-in-content"><div class="ad-box ad-728">Advertisement · In-Content Responsive</div></div>
+
+    <!-- SECURITY -->
+    <div class="section">
+      <div class="section-head" style="--tc:#16a34a"><div class="section-dot"></div><span class="section-title">🔒 PDF Security</span><div class="section-line"></div><span class="section-count">3 tools</span></div>
+      <div class="tool-grid">
+        <a class="tool-card" href="/tools/protect-pdf" style="--tc:#16a34a" data-kw="protect password encrypt lock secure pdf"><div class="card-top"><div class="card-icon">🔐</div><span class="badge badge-new">NEW</span></div><div class="card-name">Protect PDF</div><div class="card-desc">Add password protection to your PDF</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/unlock-pdf" style="--tc:#dc2626" data-kw="unlock remove password decrypt pdf open"><div class="card-top"><div class="card-icon">🔓</div><span class="badge badge-new">NEW</span></div><div class="card-name">Unlock PDF</div><div class="card-desc">Remove password from a PDF you own</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/pdf-viewer" style="--tc:#2563eb" data-kw="pdf viewer reader open view read browse"><div class="card-top"><div class="card-icon">👁️</div><span class="badge badge-new">NEW</span></div><div class="card-name">PDF Viewer</div><div class="card-desc">View and read any PDF in your browser</div><span class="card-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="ad-in-content"><div class="ad-box ad-728">Advertisement · In-Content Responsive</div></div>
+
+    <!-- CONVERSION -->
+    <div class="section">
+      <div class="section-head" style="--tc:#2563eb"><div class="section-dot"></div><span class="section-title">🔁 Conversion Tools</span><div class="section-line"></div><span class="section-count">6 tools</span></div>
+      <div class="tool-grid">
+        <a class="tool-card" href="/tools/image-to-pdf" style="--tc:#2563eb" data-kw="jpg png image photo to pdf convert"><div class="card-top"><div class="card-icon">🖼️</div><span class="badge badge-hot">HOT</span></div><div class="card-name">Image to PDF</div><div class="card-desc">Convert JPG, PNG, WEBP to a PDF</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/pdf-to-image" style="--tc:#7c3aed" data-kw="pdf to jpg png image convert pages"><div class="card-top"><div class="card-icon">📸</div><span class="badge badge-hot">HOT</span></div><div class="card-name">PDF to Image</div><div class="card-desc">Convert PDF pages to PNG/JPG images</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/word-to-pdf" style="--tc:#16a34a" data-kw="word docx to pdf convert document"><div class="card-top"><div class="card-icon">📝</div></div><div class="card-name">Word to PDF</div><div class="card-desc">Convert .docx Word files to PDF</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/pdf-to-word" style="--tc:#ea580c" data-kw="pdf to word docx extract text convert"><div class="card-top"><div class="card-icon">📃</div></div><div class="card-name">PDF to Word</div><div class="card-desc">Extract PDF text as an editable document</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/document-scanner" style="--tc:#9333ea" data-kw="scan document photo camera scanner pdf"><div class="card-top"><div class="card-icon">📷</div></div><div class="card-name">Doc Scanner</div><div class="card-desc">Scan document photos into clean PDFs</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/image-to-text" style="--tc:#0891b2" data-kw="ocr image to text extract words recognition"><div class="card-top"><div class="card-icon">🔍</div></div><div class="card-name">Image to Text (OCR)</div><div class="card-desc">Extract text from images using AI OCR</div><span class="card-arrow">→</span></a>
+      </div>
+    </div>
+
+    <!-- TEXT TOOLS -->
+    <div class="section">
+      <div class="section-head" style="--tc:#0891b2"><div class="section-dot"></div><span class="section-title">✍️ Text & Writing</span><div class="section-line"></div><span class="section-count">4 tools</span></div>
+      <div class="tool-grid">
+        <a class="tool-card" href="/tools/word-counter" style="--tc:#d97706" data-kw="word counter character count text analysis sentences"><div class="card-top"><div class="card-icon">📊</div><span class="badge badge-hot">HOT</span></div><div class="card-name">Word Counter</div><div class="card-desc">Count words, chars, sentences & read time</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/case-converter" style="--tc:#7c3aed" data-kw="uppercase lowercase title case camel snake text"><div class="card-top"><div class="card-icon">🔡</div></div><div class="card-name">Case Converter</div><div class="card-desc">UPPER, lower, Title, camel, snake_case</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/lorem-ipsum" style="--tc:#2563eb" data-kw="lorem ipsum placeholder dummy text generator"><div class="card-top"><div class="card-icon">📜</div></div><div class="card-name">Lorem Ipsum</div><div class="card-desc">Generate placeholder Lorem Ipsum text</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/remove-duplicate-lines" style="--tc:#16a34a" data-kw="remove duplicates lines text clean sort"><div class="card-top"><div class="card-icon">🧹</div></div><div class="card-name">Remove Duplicates</div><div class="card-desc">Remove duplicate lines from any text</div><span class="card-arrow">→</span></a>
+      </div>
+    </div>
+
+    <!-- UTILITY -->
+    <div class="section">
+      <div class="section-head" style="--tc:#db2777"><div class="section-dot"></div><span class="section-title">🛠 Utility Tools</span><div class="section-line"></div><span class="section-count">5 tools</span></div>
+      <div class="tool-grid">
+        <a class="tool-card" href="/tools/password-generator" style="--tc:#7c3aed" data-kw="password generator secure random strong"><div class="card-top"><div class="card-icon">🔑</div><span class="badge badge-hot">HOT</span></div><div class="card-name">Password Generator</div><div class="card-desc">Generate strong secure passwords</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/qr-code-generator" style="--tc:#0891b2" data-kw="qr code generator url link barcode"><div class="card-top"><div class="card-icon">⬛</div><span class="badge badge-hot">HOT</span></div><div class="card-name">QR Code Generator</div><div class="card-desc">Generate QR codes for any URL or text</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/age-calculator" style="--tc:#dc2626" data-kw="age calculator birthday date years months days"><div class="card-top"><div class="card-icon">🎂</div></div><div class="card-name">Age Calculator</div><div class="card-desc">Calculate your exact age to the day</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/percentage-calculator" style="--tc:#ea580c" data-kw="percentage calculator percent discount increase decrease"><div class="card-top"><div class="card-icon">📉</div></div><div class="card-name">Percentage Calculator</div><div class="card-desc">Calculate percentages and discounts</div><span class="card-arrow">→</span></a>
+        <a class="tool-card" href="/tools/base64" style="--tc:#2563eb" data-kw="base64 encode decode convert string"><div class="card-top"><div class="card-icon">🔢</div></div><div class="card-name">Base64 Encoder</div><div class="card-desc">Encode or decode Base64 strings</div><span class="card-arrow">→</span></a>
+      </div>
+    </div>
+
+  </div>
+
+  <aside class="sidebar-col">
+    <div class="sidebar-widget">
+      <div class="sw-head"><h3>🔥 Most Popular</h3></div>
+      <div class="sw-body">
+        <a class="related-link" href="/tools/merge-pdf"><span class="rl-icon">🔗</span><span class="rl-name">Merge PDF</span></a>
+        <a class="related-link" href="/tools/compress-pdf"><span class="rl-icon">🗜️</span><span class="rl-name">Compress PDF</span></a>
+        <a class="related-link" href="/tools/split-pdf"><span class="rl-icon">✂️</span><span class="rl-name">Split PDF</span></a>
+        <a class="related-link" href="/tools/protect-pdf"><span class="rl-icon">🔐</span><span class="rl-name">Protect PDF</span></a>
+        <a class="related-link" href="/tools/unlock-pdf"><span class="rl-icon">🔓</span><span class="rl-name">Unlock PDF</span></a>
+        <a class="related-link" href="/tools/word-counter"><span class="rl-icon">📊</span><span class="rl-name">Word Counter</span></a>
+        <a class="related-link" href="/tools/qr-code-generator"><span class="rl-icon">⬛</span><span class="rl-name">QR Code Generator</span></a>
+      </div>
+    </div>
+    <div><div class="ad-box ad-300">Advertisement<br/>300×250<br/><small style="font-size:0.65rem;color:var(--ink4);margin-top:4px;display:block">Rectangle — Best RPM</small></div></div>
+    <div class="why-box">
+      <h3>✨ Why PDFShine?</h3>
+      <div class="why-item">Files never leave your device</div>
+      <div class="why-item">No daily usage limits ever</div>
+      <div class="why-item">No watermarks on output</div>
+      <div class="why-item">No account or signup needed</div>
+      <div class="why-item">Works on mobile & desktop</div>
+      <div class="why-item">100% free, always</div>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sw-head"><h3>🆕 Just Added</h3></div>
+      <div class="sw-body">
+        <a class="related-link" href="/tools/protect-pdf"><span class="rl-icon">🔐</span><span class="rl-name">Protect PDF</span></a>
+        <a class="related-link" href="/tools/unlock-pdf"><span class="rl-icon">🔓</span><span class="rl-name">Unlock PDF</span></a>
+        <a class="related-link" href="/tools/remove-pages"><span class="rl-icon">🗑️</span><span class="rl-name">Remove Pages</span></a>
+        <a class="related-link" href="/tools/organize-pdf"><span class="rl-icon">📑</span><span class="rl-name">Organize PDF</span></a>
+        <a class="related-link" href="/tools/pdf-viewer"><span class="rl-icon">👁️</span><span class="rl-name">PDF Viewer</span></a>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center"><div class="ad-box ad-160">Advertisement<br/>160×600<br/><small style="font-size:0.62rem;color:var(--ink4)">Skyscraper</small></div></div>
+  </aside>
+</div>
+
+<section class="how-section">
+  <div class="how-inner">
+    <h2>How PDFShine works</h2>
+    <p class="sub">No servers, no uploads, no waiting. Everything runs instantly in your browser.</p>
+    <div class="how-steps">
+      <div class="how-step"><div class="step-num">1</div><h3>Choose a Tool</h3><p>Pick any of the 28+ free tools. Click to open — no login, no account needed.</p></div>
+      <div class="how-step"><div class="step-num">2</div><h3>Upload Your File</h3><p>Drag & drop or select your file. It loads in your browser, never sent anywhere.</p></div>
+      <div class="how-step"><div class="step-num">3</div><h3>Download Result</h3><p>Your processed file downloads instantly. Fast, private, 100% free.</p></div>
+    </div>
+  </div>
+</section>
+
+<div style="max-width:760px;margin:40px auto 0;padding:0 32px"><div class="ad-box ad-728">Advertisement · 728×90</div></div>
+
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Is PDFShine completely free?</div><div class="faq-a">Yes — 100% free. No subscriptions, no daily limits, no premium plans. Every tool is free forever.</div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Are my files safe? Do you store them?</div><div class="faq-a">Your files are 100% safe. PDFShine runs entirely in your browser — no file is ever sent to our servers. Your documents never leave your device.</div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Do I need to create an account?</div><div class="faq-a">No account, no email, no signup needed. Just open any tool and start using it immediately.</div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Does PDFShine work on mobile phones?</div><div class="faq-a">Yes! PDFShine is fully responsive and works on Android, iPhone, tablets and desktops. No app download needed.</div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Is there a file size limit?</div><div class="faq-a">Since all processing happens in your browser, the limit depends on your device memory. Most PDFs under 100MB work perfectly.</div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">How is PDFShine different from iLovePDF or Smallpdf?</div><div class="faq-a">Unlike iLovePDF and Smallpdf which upload files to their servers and limit free usage, PDFShine processes everything locally — zero uploads, zero limits, zero watermarks, completely free.</div></div>
+</section>
+
+<div class="seo-section">
+  <div class="seo-card">
+    <h2>Free PDF Tools That Work In Your Browser — No Upload Required</h2>
+    <p>PDFShine is a free online platform offering 28+ PDF and document tools that run entirely in your browser. Whether you need to <strong>merge PDF files</strong>, <strong>split a PDF</strong>, <strong>compress PDF</strong>, <strong>protect a PDF with a password</strong>, <strong>unlock a PDF</strong>, or <strong>convert images to PDF</strong> — PDFShine handles it all instantly without uploading your files anywhere.</p>
+    <p>New tools include <strong>Protect PDF</strong> (add 128-bit password encryption), <strong>Unlock PDF</strong> (remove passwords), <strong>Remove Pages</strong>, <strong>Organize PDF</strong> (drag to reorder pages with visual thumbnails), and a full <strong>PDF Viewer</strong> — all completely free.</p>
+  </div>
+  <div class="seo-card">
+    <h2>Better Than iLovePDF and Smallpdf — No Limits, No Uploads</h2>
+    <p>Unlike iLovePDF and Smallpdf which send your files to remote servers, impose daily limits on free users, and sometimes add watermarks — PDFShine uses open-source libraries (PDF-lib, PDF.js, Tesseract.js) to process everything locally. This means complete privacy, no file size server quotas, and instant results.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand"><span class="fn">PDF<span>Shine</span></span><p>Free PDF & document tools that run in your browser. Your files stay on your device — always private, always free.</p></div>
+      <div class="footer-col"><h4>PDF Tools</h4><a href="/tools/merge-pdf">Merge PDF</a><a href="/tools/split-pdf">Split PDF</a><a href="/tools/compress-pdf">Compress PDF</a><a href="/tools/rotate-pdf">Rotate PDF</a><a href="/tools/protect-pdf">Protect PDF</a><a href="/tools/unlock-pdf">Unlock PDF</a><a href="/tools/organize-pdf">Organize PDF</a></div>
+      <div class="footer-col"><h4>Convert</h4><a href="/tools/image-to-pdf">Image to PDF</a><a href="/tools/pdf-to-image">PDF to Image</a><a href="/tools/word-to-pdf">Word to PDF</a><a href="/tools/pdf-to-word">PDF to Word</a><a href="/tools/document-scanner">Doc Scanner</a><a href="/tools/image-to-text">Image to Text</a><a href="/tools/pdf-viewer">PDF Viewer</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="/about">About Us</a><a href="/privacy-policy">Privacy Policy</a><a href="/contact">Contact</a><a href="/sitemap.xml">Sitemap</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 PDFShine · Free PDF & Document Tools · <a href="https://pdfshine.in" style="color:#9ca3af">pdfshine.in</a></p>
+      <div class="footer-links"><a href="/privacy-policy">Privacy</a><a href="/contact">Contact</a><a href="/about">About</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const allCards=Array.from(document.querySelectorAll('.tool-card'));
+function handleSearch(val){
+  const q=val.trim().toLowerCase();
+  document.getElementById('search-top').value=val;
+  document.getElementById('search-hero').value=val;
+  const box=document.getElementById('search-results');
+  const grid=document.getElementById('search-grid');
+  const cnt=document.getElementById('search-count');
+  if(!q){box.classList.remove('show');return;}
+  const matched=allCards.filter(c=>{
+    const kw=(c.dataset.kw||'').toLowerCase();
+    const nm=(c.querySelector('.card-name')?.textContent||'').toLowerCase();
+    const ds=(c.querySelector('.card-desc')?.textContent||'').toLowerCase();
+    return kw.includes(q)||nm.includes(q)||ds.includes(q);
+  });
+  grid.innerHTML=matched.map(c=>c.outerHTML).join('');
+  cnt.textContent=matched.length+' found';
+  box.classList.toggle('show',matched.length>0);
+  if(matched.length)box.scrollIntoView({behavior:'smooth',block:'start'});
+}
+document.querySelectorAll('#search-top,#search-hero').forEach(el=>{
+  el.addEventListener('keydown',e=>{if(e.key==='Escape'){el.value='';handleSearch('');}});
+  el.addEventListener('input',e=>handleSearch(e.target.value));
+});
+function toggleFaq(el){const o=el.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));if(!o)el.classList.add('open');}
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+document.querySelectorAll('.tool-card').forEach(c=>{c.addEventListener('click',()=>{const nm=c.querySelector('.card-name')?.textContent;if(typeof gtag!=='undefined')gtag('event','tool_click',{tool_name:nm});});});
+</script>
+</body>
+</html>

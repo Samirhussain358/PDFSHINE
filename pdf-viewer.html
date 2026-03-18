@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PDF Viewer – Read PDF Online – PDFShine Free Online Tool</title>
+<meta name="description" content="Open and view any PDF file in your browser. Navigate pages, zoom in/out, and read any PDF for free. No signup needed."/>
+<link rel="canonical" href="https://pdfshine.in/tools/pdf-viewer"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PDF Viewer – Read PDF Online","applicationCategory":"UtilitiesApplication","operatingSystem":"Web Browser","url":"https://pdfshine.in/tools/pdf-viewer","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<style>
+
+:root{
+  --white:#ffffff;--bg:#f5f6fa;--bg2:#eef0f7;--surface:#ffffff;
+  --border:#e2e5f0;--border2:#d0d4e8;
+  --ink:#1a1d2e;--ink2:#5a5f7d;--ink3:#9399b5;--ink4:#c5c9de;
+  --red:#e8403a;--red2:#ff6b65;--red-bg:#fff5f5;--red-border:#fdd;
+  --green:#16a34a;--blue:#2563eb;--orange:#ea580c;--purple:#7c3aed;
+  --tc:#e8403a;
+  --font:'Figtree',sans-serif;--mono:'JetBrains Mono',monospace;
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
+  --shadow:0 4px 16px rgba(0,0,0,0.08),0 1px 4px rgba(0,0,0,0.04);
+  --shadow-lg:0 12px 40px rgba(0,0,0,0.12),0 4px 12px rgba(0,0,0,0.06);
+  --r:12px;--r2:18px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;min-height:100vh;}
+header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;height:60px;display:flex;align-items:center;padding:0 32px;gap:20px;box-shadow:var(--shadow-sm);}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0;}
+.logo-icon{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,#e8403a,#ff8c00);display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 3px 10px rgba(232,64,58,0.3);}
+.logo-name{font-size:1.05rem;font-weight:900;color:var(--ink);letter-spacing:-0.04em;}
+.logo-name span{color:var(--red);}
+.hnav{display:flex;align-items:center;gap:4px;margin-left:auto;}
+.hnav a{font-size:0.8rem;font-weight:600;color:var(--ink2);text-decoration:none;padding:6px 12px;border-radius:8px;transition:all 0.15s;}
+.hnav a:hover{color:var(--ink);background:var(--bg);}
+.hnav .back{display:flex;align-items:center;gap:5px;color:var(--red)!important;}
+.hnav .back:hover{background:var(--red-bg)!important;}
+.breadcrumb{max-width:880px;margin:14px auto 0;padding:0 32px;display:flex;align-items:center;gap:6px;font-size:0.75rem;color:var(--ink3);}
+.breadcrumb a{color:var(--ink3);text-decoration:none;transition:color 0.15s;}
+.breadcrumb a:hover{color:var(--red);}
+.tool-hero{max-width:880px;margin:20px auto 0;padding:0 32px;}
+.tool-hero-inner{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r2);padding:28px 28px 24px;display:flex;align-items:flex-start;gap:20px;box-shadow:var(--shadow-sm);border-left:4px solid var(--tc);}
+.th-icon{width:60px;height:60px;border-radius:14px;background:color-mix(in srgb,var(--tc) 10%,var(--bg));display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;}
+.th-info h1{font-size:1.5rem;font-weight:900;letter-spacing:-0.04em;margin-bottom:5px;color:var(--ink);}
+.th-info p{font-size:0.86rem;color:var(--ink2);line-height:1.65;max-width:560px;}
+.th-badges{display:flex;gap:7px;margin-top:11px;flex-wrap:wrap;}
+.thb{font-size:0.68rem;font-weight:700;padding:3px 10px;border-radius:100px;border:1.5px solid;}
+.thb-free{color:#16a34a;border-color:#bbf7d0;background:#f0fdf4;}
+.thb-priv{color:#2563eb;border-color:#bfdbfe;background:#eff6ff;}
+.thb-fast{color:#d97706;border-color:#fed7aa;background:#fff7ed;}
+.tool-layout{max-width:880px;margin:20px auto 0;padding:0 32px 60px;display:grid;grid-template-columns:1fr 260px;gap:22px;align-items:start;}
+.tool-main{}
+.tool-sidebar{display:flex;flex-direction:column;gap:16px;position:sticky;top:72px;}
+.workspace{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r2);padding:26px;box-shadow:var(--shadow-sm);}
+.ws-title{font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink3);margin-bottom:14px;}
+.upload-zone{border:2.5px dashed var(--border2);border-radius:var(--r2);padding:48px 24px;text-align:center;cursor:pointer;transition:all 0.2s;position:relative;background:var(--bg);}
+.upload-zone:hover,.upload-zone.drag{border-color:var(--tc);background:color-mix(in srgb,var(--tc) 4%,var(--bg));box-shadow:inset 0 0 32px color-mix(in srgb,var(--tc) 3%,transparent);}
+.upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+.uz-icon{font-size:3.2rem;display:block;margin-bottom:14px;}
+.uz-title{font-size:0.98rem;font-weight:800;color:var(--ink);display:block;margin-bottom:5px;}
+.uz-sub{font-size:0.76rem;color:var(--ink3);font-weight:500;}
+.uz-hint{display:inline-flex;align-items:center;gap:5px;background:var(--white);border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:0.72rem;color:var(--ink2);font-weight:600;margin-top:14px;box-shadow:var(--shadow-sm);}
+.field{margin-bottom:18px;}
+.field-label{display:block;font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink3);margin-bottom:7px;}
+input[type=text],input[type=number],input[type=date],input[type=password],textarea,select{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;color:var(--ink);font-family:var(--font);font-size:0.88rem;padding:11px 14px;outline:none;transition:all 0.15s;resize:vertical;}
+input:focus,textarea:focus,select:focus{border-color:var(--tc);box-shadow:0 0 0 3px color-mix(in srgb,var(--tc) 10%,transparent);background:var(--white);}
+textarea{font-family:var(--mono);font-size:0.83rem;line-height:1.6;}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+.btn{display:inline-flex;align-items:center;gap:7px;cursor:pointer;padding:12px 24px;border-radius:10px;font-family:var(--font);font-size:0.88rem;font-weight:700;border:none;transition:all 0.18s;}
+.btn-primary{background:var(--tc);color:white;box-shadow:0 4px 16px color-mix(in srgb,var(--tc) 30%,transparent);}
+.btn-primary:hover{filter:brightness(1.08);transform:translateY(-1px);box-shadow:0 6px 22px color-mix(in srgb,var(--tc) 40%,transparent);}
+.btn-ghost{background:var(--white);color:var(--ink2);border:1.5px solid var(--border);}
+.btn-ghost:hover{border-color:var(--ink3);color:var(--ink);background:var(--bg);}
+.btn-green{background:var(--green);color:white;}
+.btn-green:hover{filter:brightness(1.1);}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+.file-list{margin-top:14px;display:flex;flex-direction:column;gap:6px;}
+.file-item{display:flex;align-items:center;gap:10px;background:var(--bg);border:1.5px solid var(--border);border-radius:9px;padding:10px 14px;}
+.fi-icon{font-size:1rem;flex-shrink:0;}
+.fi-name{flex:1;font-size:0.8rem;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.fi-size{font-size:0.7rem;color:var(--ink3);font-family:var(--mono);flex-shrink:0;}
+.fi-del{background:none;border:none;cursor:pointer;color:var(--ink3);font-size:1rem;padding:2px 6px;transition:color 0.15s;flex-shrink:0;}
+.fi-del:hover{color:#dc2626;}
+.result-box{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r);padding:18px;margin-top:18px;}
+.result-label{font-size:0.67rem;font-weight:800;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink3);margin-bottom:12px;}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--white);border-radius:8px;margin-bottom:6px;border:1px solid var(--border);}
+.ir-lbl{font-size:0.78rem;color:var(--ink3);font-weight:600;}
+.ir-val{font-size:0.84rem;font-weight:700;font-family:var(--mono);color:var(--ink);}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px;}
+.stat-chip{background:var(--white);border:1.5px solid var(--border);border-radius:9px;padding:13px;text-align:center;box-shadow:var(--shadow-sm);}
+.sc-val{font-size:1.4rem;font-weight:900;font-family:var(--mono);color:var(--ink);display:block;letter-spacing:-0.03em;}
+.sc-lbl{font-size:0.62rem;color:var(--ink3);text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-top:2px;display:block;}
+.progress-wrap{margin-top:16px;}
+.progress-lbl{display:flex;justify-content:space-between;font-size:0.76rem;color:var(--ink3);font-weight:600;margin-bottom:6px;}
+.progress-track{height:8px;background:var(--border);border-radius:100px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--tc);border-radius:100px;transition:width 0.3s;width:0%;}
+.notice{background:color-mix(in srgb,var(--orange) 8%,var(--white));border:1.5px solid color-mix(in srgb,var(--orange) 20%,var(--border));border-radius:10px;padding:11px 15px;font-size:0.78rem;color:#92400e;font-weight:600;margin-bottom:18px;display:flex;align-items:flex-start;gap:8px;}
+.notice-icon{flex-shrink:0;font-size:1rem;}
+.success-box{background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:10px;padding:16px;margin-top:16px;display:flex;align-items:center;gap:10px;font-size:0.85rem;color:#166534;font-weight:600;}
+.error-box{background:#fef2f2;border:1.5px solid #fecaca;border-radius:10px;padding:16px;margin-top:16px;font-size:0.85rem;color:#991b1b;font-weight:600;}
+.sw-widget{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r2);overflow:hidden;box-shadow:var(--shadow-sm);}
+.sw-head{padding:13px 16px;border-bottom:1px solid var(--border);background:var(--bg);}
+.sw-head h3{font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink3);}
+.sw-body{padding:12px;}
+.rel-link{display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:9px;text-decoration:none;background:var(--bg);border:1px solid var(--border);margin-bottom:6px;transition:all 0.15s;}
+.rel-link:last-child{margin-bottom:0;}
+.rel-link:hover{border-color:var(--red);background:var(--red-bg);}
+.rl-icon{font-size:0.95rem;width:20px;text-align:center;flex-shrink:0;}
+.rl-name{font-size:0.77rem;font-weight:600;color:var(--ink2);}
+.rel-link:hover .rl-name{color:var(--red);}
+.ad-box{background:var(--white);border:1.5px dashed var(--border2);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:var(--ink4);font-size:0.7rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;text-align:center;flex-direction:column;gap:4px;}
+.ad-300{min-height:250px;width:100%;}
+.how-list{display:flex;flex-direction:column;gap:10px;}
+.how-item{display:flex;align-items:flex-start;gap:10px;}
+.how-num{width:22px;height:22px;border-radius:50%;background:var(--tc);color:white;font-size:0.68rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.how-text strong{font-size:0.8rem;color:var(--ink);display:block;margin-bottom:1px;}
+.how-text span{font-size:0.75rem;color:var(--ink3);}
+.range-wrap{display:flex;align-items:center;gap:14px;}
+input[type=range]{flex:1;accent-color:var(--tc);cursor:pointer;}
+.range-num{font-family:var(--mono);font-weight:700;font-size:0.9rem;color:var(--tc);min-width:30px;text-align:center;}
+.opt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:8px;}
+.opt-item{display:flex;align-items:center;gap:9px;background:var(--bg);border:1.5px solid var(--border);border-radius:9px;padding:9px 13px;cursor:pointer;user-select:none;font-size:0.8rem;font-weight:600;color:var(--ink2);transition:border-color 0.15s;}
+.opt-item:hover{border-color:var(--border2);}
+.opt-item input{accent-color:var(--tc);width:14px;height:14px;cursor:pointer;}
+.page-thumb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:10px;margin-top:16px;}
+.page-thumb{position:relative;border-radius:9px;overflow:hidden;border:2px solid var(--border);background:var(--white);cursor:grab;transition:all 0.2s;box-shadow:var(--shadow-sm);}
+.page-thumb:hover{border-color:var(--tc);box-shadow:0 4px 14px rgba(0,0,0,0.1);}
+.page-thumb.selected{border-color:#dc2626;box-shadow:0 0 0 2px rgba(220,38,38,0.2);}
+.page-thumb.dragging{opacity:0.5;transform:scale(0.95);}
+.pt-canvas{display:block;width:100%;height:130px;object-fit:cover;}
+.pt-num{position:absolute;bottom:0;left:0;right:0;background:rgba(26,29,46,0.75);color:white;font-size:0.65rem;font-weight:700;padding:4px 8px;text-align:center;}
+.pt-del{position:absolute;top:5px;right:5px;background:rgba(220,38,38,0.9);border:none;border-radius:50%;width:20px;height:20px;color:white;font-size:0.7rem;cursor:pointer;font-weight:900;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.15s;}
+.page-thumb:hover .pt-del{opacity:1;}
+.pt-rotate{position:absolute;top:5px;left:5px;background:rgba(0,0,0,0.6);border:none;border-radius:50%;width:20px;height:20px;color:white;font-size:0.7rem;cursor:pointer;font-weight:700;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.15s;}
+.page-thumb:hover .pt-rotate{opacity:1;}
+.viewer-container{background:var(--ink);border-radius:var(--r2);overflow:hidden;min-height:500px;}
+.viewer-toolbar{background:#1e1e2a;padding:12px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #2a2a3a;}
+.viewer-toolbar button{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:white;border-radius:7px;padding:7px 14px;font-size:0.8rem;font-weight:600;cursor:pointer;font-family:var(--font);transition:all 0.15s;}
+.viewer-toolbar button:hover{background:rgba(255,255,255,0.2);}
+.viewer-toolbar .page-info{color:rgba(255,255,255,0.6);font-size:0.82rem;font-weight:500;}
+.viewer-toolbar input[type=number]{width:52px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;border-radius:7px;padding:6px 8px;font-size:0.82rem;text-align:center;font-family:var(--mono);}
+.viewer-pages{padding:20px;display:flex;flex-direction:column;align-items:center;gap:16px;max-height:640px;overflow-y:auto;}
+.viewer-pages canvas{box-shadow:0 4px 20px rgba(0,0,0,0.4);border-radius:4px;}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:white;font-weight:700;font-size:0.82rem;padding:11px 24px;border-radius:100px;z-index:999;transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1);pointer-events:none;box-shadow:var(--shadow-lg);}
+.toast.show{transform:translateX(-50%) translateY(0);}
+.tool-footer{background:var(--white);border-top:1px solid var(--border);padding:22px 32px;text-align:center;margin-top:40px;}
+.tool-footer p{font-size:0.74rem;color:var(--ink3);margin-bottom:10px;}
+.tfl{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;}
+.tfl a{font-size:0.74rem;color:var(--ink3);text-decoration:none;font-weight:600;}
+.tfl a:hover{color:var(--red);}
+@media(max-width:768px){header{padding:0 14px;}.breadcrumb,.tool-hero,.tool-layout{padding-left:14px;padding-right:14px;}.tool-layout{grid-template-columns:1fr;}.tool-sidebar{position:static;}.row2,.row3{grid-template-columns:1fr;}.tool-hero-inner{flex-direction:column;gap:12px;}.tool-footer{padding:18px 14px;}}
+
+:root{--tc:#2563eb;}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="/"><div class="logo-icon">✨</div><div class="logo-name">PDF<span>Shine</span></div></a>
+  <div class="hnav">
+    <a href="/" class="back">← All Tools</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </div>
+</header>
+<nav class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/">Tools</a><span>/</span><span style="color:var(--ink)">PDF Viewer</span></nav>
+<div class="tool-hero">
+  <div class="tool-hero-inner">
+    <div class="th-icon">👁️</div>
+    <div class="th-info">
+      <h1>PDF Viewer – Read PDF Online</h1>
+      <p>Open and view any PDF file in your browser. Navigate pages, zoom in/out, and read any PDF for free. No signup needed.</p>
+      <div class="th-badges">
+        <span class="thb thb-free">✓ 100% Free</span>
+        <span class="thb thb-priv">🔒 Files Stay Local</span>
+        <span class="thb thb-fast">⚡ Instant</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tool-layout">
+  <div class="tool-main">
+<div class="workspace">
+  <div id="viewer-upload">
+    <div class="upload-zone">
+      <input type="file" id="vw-input" accept=".pdf" onchange="loadViewer(this.files[0])"/>
+      <span class="uz-icon">👁️</span>
+      <span class="uz-title">Click or drag & drop your PDF</span>
+      <span class="uz-sub">Open and read any PDF file in your browser</span>
+      <span class="uz-hint">🔒 File stays on your device</span>
+    </div>
+  </div>
+  <div id="viewer-area" style="display:none;margin-top:16px">
+    <div class="viewer-container">
+      <div class="viewer-toolbar">
+        <button onclick="vwPrev()">◀ Prev</button>
+        <button onclick="vwNext()">Next ▶</button>
+        <span class="page-info">Page <input type="number" id="vw-page-in" min="1" value="1" style="width:48px" onchange="vwGoto(this.value)"/> of <span id="vw-total">0</span></span>
+        <button onclick="vwZoom(-0.2)">− Zoom</button>
+        <button onclick="vwZoom(0.2)">+ Zoom</button>
+        <span class="page-info" id="vw-zoom-lbl" style="margin-left:4px">100%</span>
+        <button onclick="clearViewer()" style="margin-left:auto;background:rgba(220,38,38,0.3);">✕ Close</button>
+      </div>
+      <div class="viewer-pages" id="vw-pages"></div>
+    </div>
+    <div id="vw-info" style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+      <div class="info-row" style="flex:1"><span class="ir-lbl">File</span><strong class="ir-val" id="vw-fname"></strong></div>
+      <div class="info-row" style="flex:1"><span class="ir-lbl">Pages</span><strong class="ir-val" id="vw-pages-count"></strong></div>
+      <div class="info-row" style="flex:1"><span class="ir-lbl">Size</span><strong class="ir-val" id="vw-fsize"></strong></div>
+    </div>
+  </div>
+</div>
+<script>
+let vwDoc=null,vwPage=1,vwTotal=0,vwScale=1.2,vwRendering=false;
+async function loadViewer(file){
+  if(!file)return;
+  document.getElementById('vw-fname').textContent=file.name;
+  document.getElementById('vw-fsize').textContent=fmtBytes(file.size);
+  const buf=await file.arrayBuffer();
+  vwDoc=await pdfjsLib.getDocument({data:new Uint8Array(buf)}).promise;
+  vwTotal=vwDoc.numPages;
+  vwPage=1;
+  document.getElementById('vw-total').textContent=vwTotal;
+  document.getElementById('vw-pages-count').textContent=vwTotal+' pages';
+  document.getElementById('viewer-upload').style.display='none';
+  document.getElementById('viewer-area').style.display='block';
+  await renderVwPage(vwPage);
+}
+async function renderVwPage(num){
+  if(!vwDoc||vwRendering)return;
+  vwRendering=true;
+  const page=await vwDoc.getPage(num);
+  const vp=page.getViewport({scale:vwScale});
+  const cv=document.createElement('canvas');cv.width=vp.width;cv.height=vp.height;
+  await page.render({canvasContext:cv.getContext('2d'),viewport:vp}).promise;
+  const container=document.getElementById('vw-pages');
+  container.innerHTML='';
+  container.appendChild(cv);
+  document.getElementById('vw-page-in').value=num;
+  document.getElementById('vw-zoom-lbl').textContent=Math.round(vwScale*100)+'%';
+  vwRendering=false;
+}
+function vwPrev(){if(vwPage>1){vwPage--;renderVwPage(vwPage);}}
+function vwNext(){if(vwPage<vwTotal){vwPage++;renderVwPage(vwPage);}}
+function vwGoto(n){const p=Math.max(1,Math.min(parseInt(n)||1,vwTotal));vwPage=p;renderVwPage(p);}
+function vwZoom(delta){vwScale=Math.max(0.4,Math.min(3,vwScale+delta));renderVwPage(vwPage);}
+function clearViewer(){vwDoc=null;document.getElementById('viewer-upload').style.display='block';document.getElementById('viewer-area').style.display='none';document.getElementById('vw-input').value='';}
+document.addEventListener('keydown',e=>{if(!vwDoc)return;if(e.key==='ArrowRight'||e.key==='ArrowDown')vwNext();if(e.key==='ArrowLeft'||e.key==='ArrowUp')vwPrev();});
+</script>
+</div>
+  <aside class="tool-sidebar">
+    <div class="sw-widget">
+      <div class="sw-head"><h3>How to Use</h3></div>
+      <div class="sw-body"><div class="how-list"><div class="how-item"><div class="how-num">1</div><div class="how-text"><strong>Upload PDF</strong><span>Click to upload or drag & drop any PDF file</span></div></div><div class="how-item"><div class="how-num">2</div><div class="how-text"><strong>Browse Pages</strong><span>Use arrow keys or buttons to navigate pages</span></div></div><div class="how-item"><div class="how-num">3</div><div class="how-text"><strong>Zoom</strong><span>Use + / − to zoom in and out of pages</span></div></div></div></div>
+    </div>
+    <div class="ad-box ad-300">Advertisement<br/>300×250</div>
+    <div class="sw-widget">
+      <div class="sw-head"><h3>Related Tools</h3></div>
+      <div class="sw-body"><a class="rel-link" href="/tools/compress-pdf"><span class="rl-icon">🗜️</span><span class="rl-name">Compress PDF</span></a><a class="rel-link" href="/tools/merge-pdf"><span class="rl-icon">🔗</span><span class="rl-name">Merge PDF</span></a><a class="rel-link" href="/tools/split-pdf"><span class="rl-icon">✂️</span><span class="rl-name">Split PDF</span></a><a class="rel-link" href="/tools/pdf-to-text"><span class="rl-icon">📋</span><span class="rl-name">PDF to Text</span></a><a class="rel-link" href="/tools/pdf-info"><span class="rl-icon">ℹ️</span><span class="rl-name">PDF Info</span></a></div>
+    </div>
+  </aside>
+</div>
+<div class="toast" id="toast"></div>
+<footer class="tool-footer">
+  <p>© 2026 PDFShine · Free PDF & Document Tools · Files never leave your device</p>
+  <div class="tfl"><a href="/">All Tools</a><a href="/about">About</a><a href="/privacy-policy">Privacy</a><a href="/contact">Contact</a></div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+if(typeof pdfjsLib!=='undefined')pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+function toast(msg,dur=2600){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur);}
+function fmtBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function dlBlob(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}
+function copyEl(id){const el=document.getElementById(id);navigator.clipboard.writeText(el.value||el.textContent).then(()=>toast('Copied!'));}
+document.querySelectorAll('.upload-zone').forEach(z=>{
+  z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag');});
+  z.addEventListener('dragleave',()=>z.classList.remove('drag'));
+  z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag');});
+});
+</script>
+</body>
+</html>
