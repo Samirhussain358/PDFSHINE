@@ -1,0 +1,157 @@
+[[redirects]]
+  from = "/tools/merge-pdf"
+  to = "/tools/merge-pdf.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/split-pdf"
+  to = "/tools/split-pdf.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/compress-pdf"
+  to = "/tools/compress-pdf.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/rotate-pdf"
+  to = "/tools/rotate-pdf.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/watermark-pdf"
+  to = "/tools/watermark-pdf.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/protect-pdf"
+  to = "/tools/protect-pdf.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/unlock-pdf"
+  to = "/tools/unlock-pdf.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/remove-pages"
+  to = "/tools/remove-pages.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/organize-pdf"
+  to = "/tools/organize-pdf.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/pdf-viewer"
+  to = "/tools/pdf-viewer.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/pdf-info"
+  to = "/tools/pdf-info.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/pdf-to-text"
+  to = "/tools/pdf-to-text.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/add-page-numbers"
+  to = "/tools/add-page-numbers.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/image-to-pdf"
+  to = "/tools/image-to-pdf.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/pdf-to-image"
+  to = "/tools/pdf-to-image.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/word-to-pdf"
+  to = "/tools/word-to-pdf.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/pdf-to-word"
+  to = "/tools/pdf-to-word.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/document-scanner"
+  to = "/tools/document-scanner.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/image-to-text"
+  to = "/tools/image-to-text.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/word-counter"
+  to = "/tools/word-counter.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/case-converter"
+  to = "/tools/case-converter.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/lorem-ipsum"
+  to = "/tools/lorem-ipsum.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/remove-duplicate-lines"
+  to = "/tools/remove-duplicate-lines.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/password-generator"
+  to = "/tools/password-generator.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/qr-code-generator"
+  to = "/tools/qr-code-generator.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/age-calculator"
+  to = "/tools/age-calculator.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/percentage-calculator"
+  to = "/tools/percentage-calculator.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/base64"
+  to = "/tools/base64.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy-policy.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[build]
+  publish = "."
